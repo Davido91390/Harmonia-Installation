@@ -23,7 +23,7 @@ const read = (req, res) => {
   const category = categories.find((p) => p.id === parsedId);
 
   if (category != null) {
-    res.json(category);
+    res.json({ result: category });
   } else {
     res.sendStatus(404);
   }
